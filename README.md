@@ -1,4 +1,4 @@
-## Swish - Swift Shell
+# Swish - Swift Shell
 ##### Execute shell scripts from your Swift scripts.
 
 If you've been into scripting in Swift for awhile, you noticed that you can get rid of most of the basic shell scripting commands, but sometimes you still need to access certain shell commands, or want to create wrappers around CLI such as fastlane and bundler.
