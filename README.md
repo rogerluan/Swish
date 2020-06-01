@@ -5,6 +5,8 @@ If you've been into scripting in Swift for awhile, you noticed that you can get 
 
 This package solves the issues where your Swift script can't find the same executables as your regular shell.
 
+With Swish, you can run bundler and fastlane from Swift scripts, as well as any arbitrary shell script, effortlessly.
+
 ## Installation
 
 Swish is available via Swift Package Manager.
