@@ -5,6 +5,29 @@ If you've been into scripting in Swift for awhile, you noticed that you can get 
 
 This package solves the issues where your Swift script can't find the same executables as your regular shell.
 
+## Installation
+
+Swish is available via Swift Package Manager.
+You can import it by modifying your Package.swift, adding Swish to your packade dependencies:
+
+```
+…
+dependencies: [
+    …
+    .package(url: "https://github.com/rogerluan/Swish", from: "0.1.0"),
+],
+targets: [
+    .target(
+        …
+        dependencies: [
+            …
+            "Swish",
+            ]
+        ),
+    …
+]
+```
+
 ## Usage
 
 #### Single Command
