@@ -1,8 +1,5 @@
 // Copyright © 2020 Roger Oba. All rights reserved.
 
-// TODO: Explain why no default output reading was integrated into the sh() function. tl;dr: you probably don't want, or shouldn't want to read output from CLI.
-// If you need to do it, it should be done in Swift (e.g. reading/parsing files, grepping/sedding around, manipulating text streams, etc. The problem with redirecting the stdout/err out of the Process() is that it doesn't work with streams of text (e.g. async methods that take time to process). By not overriding it, all the stdout prints nicely on the terminal. Maybe add an option to silent the output or silent errors.
-
 import Foundation
 
 /// Executes a command from a given launch path, passing the given arguments.

@@ -72,6 +72,20 @@ bundleExec("fastlane", "deploy", "submit:false", "build_number:24")
 bundleExec("jazzy", "--clean", "--output", "docs/swift", "--theme", "fullwidth")
 ```
 
+## Design details
+
+##### Global Scope
+
+At first I was concerned about releasing these set of utilities in the global scope, but it might actually make sense. Still on the fence, but if you're facing issues (such as collisions or lack of clarity), you can always namespace under _Swish_ module name.
+
+##### Forwarding Stdout
+
+I decided to remove the capture/forwarding of the standard and error outputs because you shouldn't need to manipulate them. If your script needs to read the output of a bash script, you can probably perform the same task using pure Swift instead.
+
+Also, if you execute programs that print an asynchronous stream of text, if you override stdout, you will only be able to capture the first blast of the stream (for example the first line), instead of the entire stream.
+
+If you have issues with this design, I'm happy to discuss and adjust this as needed, maybe allowing further customization.
+
 ## Contact
 
 [@rogerluan_](https://twitter.com/rogerluan_)
